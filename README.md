@@ -9,6 +9,7 @@ Foi utilizado exemplo de test unitário para validar um cpf e um cartão de cré
 Também foram utilizados os recursos do Lombok em uma das classes, para comparar o tanto de código de pode ser "dispensado".
 
 Para testes, pode ser utilizado no Postman, os seguintes consumos:
+
 POST: localhost:8083/api/private/candidato
 {
   "nome": "Nome HIJK",
