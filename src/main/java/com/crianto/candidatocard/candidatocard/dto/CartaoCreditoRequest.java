@@ -4,25 +4,15 @@ import java.util.Objects;
 
 public class CartaoCreditoRequest {
 
-    private Long cartaoCreditoCandidatoId;
     private String descricao;
     private String numeroCartao;
 
     public CartaoCreditoRequest() {
     }
 
-    public CartaoCreditoRequest(Long cartaoCreditoCandidatoId, String descricao, String numeroCartao) {
-        this.cartaoCreditoCandidatoId = cartaoCreditoCandidatoId;
+    public CartaoCreditoRequest(String descricao, String numeroCartao) {
         this.descricao = descricao;
         this.numeroCartao = numeroCartao;
-    }
-
-    public Long getCartaoCreditoCandidatoId() {
-        return cartaoCreditoCandidatoId;
-    }
-
-    public void setCartaoCreditoCandidatoId(Long cartaoCreditoCandidatoId) {
-        this.cartaoCreditoCandidatoId = cartaoCreditoCandidatoId;
     }
 
     public String getDescricao() {
@@ -44,8 +34,7 @@ public class CartaoCreditoRequest {
     @Override
     public String toString() {
         return "CartaoCreditoRequest{" +
-                "cartaoCreditoCandidatoId=" + cartaoCreditoCandidatoId +
-                ", descricao='" + descricao + '\'' +
+                "descricao='" + descricao + '\'' +
                 ", numeroCartao='" + numeroCartao + '\'' +
                 '}';
     }
@@ -55,13 +44,12 @@ public class CartaoCreditoRequest {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CartaoCreditoRequest that = (CartaoCreditoRequest) o;
-        return Objects.equals(cartaoCreditoCandidatoId, that.cartaoCreditoCandidatoId) &&
-                Objects.equals(descricao, that.descricao) &&
+        return Objects.equals(descricao, that.descricao) &&
                 Objects.equals(numeroCartao, that.numeroCartao);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cartaoCreditoCandidatoId, descricao, numeroCartao);
+        return Objects.hash(descricao, numeroCartao);
     }
 }

@@ -6,15 +6,13 @@ import java.util.Objects;
 
 public class CartaoCreditoDTO {
 
-    private Long cartaoCreditoCandidatoId;
     private String descricao;
     private String numeroCartao;
 
     public CartaoCreditoDTO() {
     }
 
-    public CartaoCreditoDTO(Long cartaoCreditoCandidatoId, String descricao, String numeroCartao) {
-        this.cartaoCreditoCandidatoId = cartaoCreditoCandidatoId;
+    public CartaoCreditoDTO(String descricao, String numeroCartao) {
         this.descricao = descricao;
         this.numeroCartao = numeroCartao;
     }
@@ -25,18 +23,7 @@ public class CartaoCreditoDTO {
         this.numeroCartao = cartaoCredito.getNumeroCartao();
     }
 
-    public Long getCartaoCreditoCandidatoId() {
-        return cartaoCreditoCandidatoId;
-    }
-
-    public void setCartaoCreditoCandidatoId(Long cartaoCreditoCandidatoId) {
-        this.cartaoCreditoCandidatoId = cartaoCreditoCandidatoId;
-    }
-
     public String getDescricao() {
-
-        formatar cartao aqui e cpf no cliente
-
         return descricao;
     }
 
@@ -55,8 +42,7 @@ public class CartaoCreditoDTO {
     @Override
     public String toString() {
         return "CartaoCreditoDTO{" +
-                "cartaoCreditoCandidatoId=" + cartaoCreditoCandidatoId +
-                ", descricao='" + descricao + '\'' +
+                "descricao='" + descricao + '\'' +
                 ", numeroCartao='" + numeroCartao + '\'' +
                 '}';
     }
@@ -66,13 +52,12 @@ public class CartaoCreditoDTO {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CartaoCreditoDTO that = (CartaoCreditoDTO) o;
-        return Objects.equals(cartaoCreditoCandidatoId, that.cartaoCreditoCandidatoId) &&
-                Objects.equals(descricao, that.descricao) &&
+        return Objects.equals(descricao, that.descricao) &&
                 Objects.equals(numeroCartao, that.numeroCartao);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cartaoCreditoCandidatoId, descricao, numeroCartao);
+        return Objects.hash(descricao, numeroCartao);
     }
 }

@@ -2,17 +2,18 @@ package com.crianto.candidatocard.candidatocard.dto;
 
 import com.crianto.candidatocard.candidatocard.model.Candidato;
 import com.crianto.candidatocard.candidatocard.model.CartaoCredito;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = {"cartoes"})
+@EqualsAndHashCode(exclude = {"cartoes"})
 public class CandidatoDTO {
 
     // getters/setters sendo feitos com o Lombok... bem como construtores, toString, hashcode e equals

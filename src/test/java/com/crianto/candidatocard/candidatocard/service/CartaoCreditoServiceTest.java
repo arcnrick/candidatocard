@@ -17,7 +17,6 @@ public class CartaoCreditoServiceTest {
     @Test
     public void validaNumeroCartaoCredito() {
         // cartão gerado em: https://www.4devs.com.br/gerador_de_numero_cartao_credito
-
         String numeroCartao = "4716.6530-7138X8543";
 
         String numero = service.validaNumeroCartao(numeroCartao);
